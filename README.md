@@ -5,10 +5,10 @@ For Debian, and Debian based Distro.
 ###
 Run this installer with root
 ###
-curl needed!!!
+curl and wget needed!!! (sry for both...)
 ###
 ```
-apt install curl -y
+apt install wget curl -y
 ```
 ###
 ### Copy paste commands
