@@ -15,10 +15,10 @@
 #
 #
 
-INSTALLER_VERSION="1.4-UNSTABLE" # installer version
-STABLE_TS3CLIENT_VERSION="3.5.3 (2020.07.14)" # stable ts3 version
+INSTALLER_VERSION="1.5-UNSTABLE" # installer version
+STABLE_TS3CLIENT_VERSION="3.5.3 (2020.08.12)" # stable ts3 version
 TS3CLIENT_VERSION=$1 # arg1
-TS3CLIENT_LOGO="https://dl.arrow-systems.de/github/teamspeak-3-client-installer/logo.png" # download logo
+TS3CLIENT_LOGO="https://raw.githubusercontent.com/Razuuu/TeamSpeak-3-Client-Installer/master/logo.png" # download logo
 ARCHITECTURE=$(dpkg --print-architecture) # architecture
 
 if [[ $EUID -ne 0 ]]; then
@@ -302,7 +302,7 @@ sleep 2
 
 echo
 echo "Following Websites using:"
-echo "files.teamspeak-services.com, dl.arrow-systems.de"
+echo "files.teamspeak-services.com"
 echo
 sleep 2
 
