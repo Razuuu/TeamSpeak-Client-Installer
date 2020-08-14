@@ -259,7 +259,7 @@ download_logo() {
 	# Download logo | amd64
 	echo "Download logo and move it to TeamSpeak3-Client-linux_amd64..."
 	sleep 3
-	wget --user github-razuuu-ts3installer --password hackmegithub $TS3CLIENT_LOGO -O TeamSpeak3-Client-linux_amd64/logo.png
+	wget $TS3CLIENT_LOGO -O TeamSpeak3-Client-linux_amd64/logo.png
 }
 
 create_temporary_folder() {
