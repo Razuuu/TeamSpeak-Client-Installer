@@ -15,8 +15,8 @@
 #
 #
 
-INSTALLER_VERSION="1.5-STABLE" # installer version
-STABLE_TS3CLIENT_VERSION="3.5.3 (2020.08.12)" # stable ts3 version
+INSTALLER_VERSION="1.6-STABLE" # installer version
+STABLE_TS3CLIENT_VERSION="3.5.5 (2020.11.06)" # stable ts3 version
 TS3CLIENT_VERSION=$1 # arg1
 TS3CLIENT_LOGO="https://raw.githubusercontent.com/Razuuu/TeamSpeak-3-Client-Installer/master/logo.png" # download logo
 ARCHITECTURE=$(dpkg --print-architecture) # architecture
