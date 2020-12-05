@@ -14,6 +14,12 @@
 # Copyright (c) 2020 Razuuu
 #
 #
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root!"
+   exit 1
+fi
+
 clear
 echo "Uninstall TeamSpeak 3 Clients"
 rm /opt/teamspeak/client/ -r
