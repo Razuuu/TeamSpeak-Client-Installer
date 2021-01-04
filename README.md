@@ -31,12 +31,12 @@ curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/m
 ###
 ### stable:
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Installer.sh; bash TeamSpeak-3-Client-Installer.sh
+curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Installer.sh; bash TeamSpeak-5-Client-Installer.sh
 ```
 ### uninstaller:
 ###
 !!!!!!!Warning, the uninstaller deletes every TeamSpeak 5 Client from the computer!!!!!!!
 ###
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Uninstaller.sh; bash TeamSpeak-3-Client-Uninstaller.sh
+curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Uninstaller.sh; bash TeamSpeak-5-Client-Uninstaller.sh
 ```
