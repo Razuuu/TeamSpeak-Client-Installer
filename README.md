@@ -12,6 +12,11 @@ apt install curl -y
 ```
 ### TeamSpeak 3
 ###
+###
+### Debian Repository (Only TS3)
+###
+Follow instructions: https://deb.arrow-systems.de/add-repo.txt
+###
 ### Copy paste commands
 ###
 ### stable:
