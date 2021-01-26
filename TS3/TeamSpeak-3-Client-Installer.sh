@@ -254,7 +254,7 @@ create_temporary_folder() {
 	# Create temporary Folder and go inside
 	echo "Create temporary folder for this script and go to the folder..."
 	sleep 3
-	mkdir -p /var/tmp/teamspeak-3-client-installer/
+	mkdir -p /var/tmp/teamspeak-client-installer/
 	cd /var/tmp/teamspeak-client-installer/
 }
 
