@@ -20,8 +20,15 @@ Follow instructions: https://deb.arrow-systems.de/add-repo.txt
 ### Copy paste commands
 ###
 ### stable:
+###
+Script
 ```
 curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Installer.sh; bash TeamSpeak-3-Client-Installer.sh 3.5.6
+```
+###
+Debian Repository
+```
+sudo apt install ts3client -y
 ```
 ### uninstaller:
 ###
