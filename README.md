@@ -15,7 +15,7 @@ apt install curl -y
 ###
 ### Debian Repository (Only TS3)
 ###
-Follow instructions: https://deb.arrow-systems.de/add-repo.txt
+Follow instructions: /
 ###
 ### Copy paste commands
 ###
