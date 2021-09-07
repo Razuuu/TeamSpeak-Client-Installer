@@ -71,14 +71,13 @@ cd ..
 text_sleep "Move TeamSpeak3-Client-linux_${tarch} to /opt/teamspeak/client/3/${arch}/${ts3version}/\n
 and ts3client-${ts3version}-${arch}.desktop to /usr/share/applications/ts3client-${ts3version}-${arch}.desktop"
 
-if [ -f /usr/share/applications/ts3client-${ts3version}-${arch}.desktop ]; then
-  rm /usr/share/applications/ts3client-${ts3version}-${arch}.desktop
-fi
+dfile="/usr/share/applications/ts3client-${ts3version}-${arch}.desktop"
+if [ -f $dfile ]; then rm $dfile; fi
 
 # Move TS3 to /opt
 mkdir -p /opt/teamspeak/client/3/${arch}
 mv TeamSpeak3-Client-linux_${tarch} /opt/teamspeak/client/3/${arch}/${ts3version}
-mv ts3client-${tarch}-${ts3version}.desktop /usr/share/applications/ts3client-${tarch}-${ts3version}.desktop
+mv ts3client-${ts3version}-${arch}.desktop /usr/share/applications/
 chmod -R 777 /opt/teamspeak/client/3/${arch}/${tarch}/
 
 text_sleep "Delete temporary folder..."
