@@ -86,8 +86,8 @@ rm -rf /var/tmp/razuuu-github-`basename $0`
 
 clear
 echo "
-TeamSpeak 3 Client Version ${tarch} (${arch}) successfully
-installed at location: /opt/teamspeak/client/3/${arch}/${tarch}/
+TeamSpeak 3 Client Version ${ts3version} (${arch}) successfully
+installed at location: /opt/teamspeak/client/3/${arch}/${ts3version}/
 
 Following Websites used:
 files.teamspeak-services.com, github.com, raw.githubusercontent.com
