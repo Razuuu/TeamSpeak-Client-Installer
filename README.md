@@ -23,7 +23,7 @@ Follow instructions: /
 ###
 Script
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Installer.sh; bash TeamSpeak-3-Client-Installer.sh 3.5.6
+curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Installer.sh; bash TeamSpeak-3-Client-Installer.sh
 ```
 ###
 Debian Repository
