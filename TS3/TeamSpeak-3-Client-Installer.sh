@@ -19,8 +19,8 @@ fi
 
 # Check and set architecture
 case ${arch} in
-  amd64*) tarch="amd64"; break;;
-   i386*) tarch="x86"; break;;
+  amd64*) tarch="amd64";;
+   i386*) tarch="x86";;
        *) echo "Your architecture are not supported by TeamSpeak!"; exit 0;;
 esac
 
