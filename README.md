@@ -1,54 +1,36 @@
 # TeamSpeak-Client-Installer
 Unofficial TeamSpeak 3 & 5 Client Installer
-###
-For Debian, and Debian based Distro.
-###
-!!! Run this with root !!!
-###
-curl needed!
-###
+for Debian and Debian-based Distributions.
+
+## Dependencies
+- curl
+
+##  TeamSpeak 3 Client
+
+#### Using script
 ```
-apt install curl -y
+curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Installer.sh
+bash TeamSpeak-3-Client-Installer.sh
 ```
-### TeamSpeak 3
-###
-###
-### Debian Repository (Only TS3)
-###
-Follow instructions: /
-###
-### Copy paste commands
-###
-### stable:
-###
-Script
+
+#### Using Debian Repository
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Installer.sh; bash TeamSpeak-3-Client-Installer.sh
+sudo apt install teamspeak3-client
 ```
-###
-Debian Repository
+
+## TeamSpeak 5 Client
+#### Using script
 ```
-sudo apt install ts3client -y
+curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Installer.sh
+bash TeamSpeak-5-Client-Installer.sh
 ```
-### uninstaller:
-###
-!!!!!!!Warning, the uninstaller deletes every TeamSpeak 3 Client from the computer!!!!!!!
-###
+
+## Uninstall
+For uninstalling the TeamSpeak Client using script, do
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS3/TeamSpeak-3-Client-Uninstaller.sh; bash TeamSpeak-3-Client-Uninstaller.sh
+bash TeamSpeak-<3,5>-Client-Uninstaller.sh
 ```
-### TeamSpeak 5
-###
-### Copy paste commands
-###
-### stable:
+By using Debian Repository use apt instead
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Installer.sh; bash TeamSpeak-5-Client-Installer.sh
-```
-### uninstaller:
-###
-!!!!!!!Warning, the uninstaller deletes every TeamSpeak 5 Client from the computer!!!!!!!
-###
-```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/TS5/TeamSpeak-5-Client-Uninstaller.sh; bash TeamSpeak-5-Client-Uninstaller.sh
+apt purge teamspeak<3,5>-client
 ```
