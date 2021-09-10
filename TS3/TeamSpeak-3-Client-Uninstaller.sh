@@ -1,19 +1,5 @@
 #!/bin/bash
-
-#
-#
-# Created by Razuuu
-#
-#
-# Contact:
-#   > Mail: joshua@arrow-systems.de
-#   > TeamSpeak: ts.arrow-systems.de
-#   > GitHub: Razuuu
-#
-#
-# Copyright (c) 2020 Razuuu
-#
-#
+# Created by Razuuu / www.razuuu.de
 
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root!"
@@ -21,9 +7,11 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 clear
-echo "Uninstall all TeamSpeak 3 Clients"
+echo "Uninstall TeamSpeak 3 Client"
 sleep 2
-rm /opt/teamspeak/client/3/ -r
-rm /usr/share/applications/ts3client-*
-clear
-echo "all TeamSpeak 3 Clients successfully uninstalled"
+
+rm -rf /opt/teamspeak3-client
+rm -f /usr/share/applications/teamspeak3-client.desktop
+
+echo "TeamSpeak 3 Client successfully uninstalled!"
+exit 0
