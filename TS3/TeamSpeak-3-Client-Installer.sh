@@ -59,7 +59,7 @@ touch teamspeak3-client.desktop
 
 echo "[Desktop Entry]
 Name=Teamspeak 3 Client
-VERSION=${ts3version}
+Version=${ts3version}
 GenericName=TeamSpeak3
 Comment=Speak with friends
 Comment[de]=Spreche mit Freunden
