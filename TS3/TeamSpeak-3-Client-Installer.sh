@@ -24,12 +24,20 @@ case ${arch} in
        *) echo "Your architecture are not supported by TeamSpeak!"; exit 0;;
 esac
 
+clear
+echo -e "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v1.9-STABLE"
+sleep 2
+
+clear
 if [ -d /opt/teamspeak3-client ]; then
 	echo "Another TS3 installation already exists, do you want to continue?"
+	echo "(Y)es | (N)o"
 	while true; do
 		read -p " » " select
 		case $select in
-			[Yy]*) echo "Okay, continue!"; break;;
+			[Yy]*) echo "Okay, continue!"; \
+			rm -rf /opt/teamspeak3-client >/dev/null; \
+			rm -f /usr/share/applications/teamspeak3-client.desktop; clear; break;;
 			[Nn]*) echo "Exit script!"; exit 1;;
 			    *) echo "No option selected!";;
 		esac
@@ -44,8 +52,6 @@ if [ -z ${ts3version} ]; then
   exit 1
 fi
 
-text_sleep "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v1.9-STABLE"
-
 text_sleep "Create temporary folder for this script"
 mkdir -p /var/tmp/razuuu-github-`basename $0`
 cd /var/tmp/razuuu-github-`basename $0`
@@ -55,7 +61,7 @@ curl -O -s https://files.teamspeak-services.com/releases/client/${ts3version}/Te
 
 text_sleep "Run file, please follow instructions!"
 chmod +x TeamSpeak3-Client-linux_${tarch}-${ts3version}.run
-bash TeamSpeak3-Client-linux_${tarch}-${ts3version}.run
+bash TeamSpeak3-Client-linux_${tarch}-${ts3version}.run --target /opt/teamspeak3-client
 
 text_sleep "Create teamspeak3-client.desktop"
 touch teamspeak3-client.desktop
@@ -75,21 +81,13 @@ Categories=Network;
 StartupWMClass=TeamSpeak 3
 StartupNotify=true" > teamspeak3-client.desktop
 
-text_sleep "Download logo and move it to TeamSpeak3-Client-linux_${tarch}..."
-cd TeamSpeak3-Client-linux_${tarch}
+text_sleep "Download logo..."
+cd /opt/teamspeak3-client
 curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/logo.png
-cd ..
 
-dfile="/usr/share/applications/teamspeak3-client.desktop"
-if [ -f $dfile ]; then rm $dfile; fi
+text_sleep "Move teamspeak3-client.desktop to /usr/share/applications"
 
-text_sleep "Move TeamSpeak3-Client-linux_${tarch} to /opt/teamspeak3-client\n
-and teamspeak3-client.desktop to ${dfile}"
-
-# Move TS3 to /opt
-mkdir -p /opt/teamspeak3-client
-mv TeamSpeak3-Client-linux_${tarch} /opt/teamspeak3-client
-mv teamspeak3-client.desktop /usr/share/applications/
+mv /var/tmp/razuuu-github-`basename $0`/teamspeak3-client.desktop /usr/share/applications
 chmod -R 777 /opt/teamspeak3-client
 
 text_sleep "Delete temporary folder..."
@@ -98,8 +96,8 @@ rm -rf /var/tmp/razuuu-github-`basename $0`
 
 clear
 echo "
-TeamSpeak 3 Client Version ${ts3version} (${arch}) successfully
-installed at location: /opt/teamspeak/client/3/${arch}/${ts3version}/
+TeamSpeak 3 Client Version ${ts3version} successfully
+installed at location: /opt/teamspeak3-client
 
 Following Websites used:
 files.teamspeak-services.com, github.com, raw.githubusercontent.com
