@@ -13,11 +13,20 @@ curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/m
 bash TeamSpeak-3-Client-Installer.sh
 ```
 
-#### Using Debian Repository
+#### Using [Debian Repository](https://deb.razuuu.de/debian)
 ```
 sudo apt install teamspeak3-client
 ```
 
+#### Using [Debian Package](https://github.com/Razuuu/TeamSpeak-Client-Installer/releases)
+```
+sudo apt install ./teamspeak3-client_3.5.6_amd64.deb
+```
+
+#### Using dpkg
+```
+sudo dpkg -i ./teamspeak3-client_3.5.6_amd64.deb
+```
 ## TeamSpeak 5 Client
 #### Using script
 ```
