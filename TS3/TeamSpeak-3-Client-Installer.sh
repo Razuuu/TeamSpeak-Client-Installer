@@ -24,6 +24,18 @@ case ${arch} in
        *) echo "Your architecture are not supported by TeamSpeak!"; exit 0;;
 esac
 
+if [ -d /opt/teamspeak3-client ]; then
+	echo "Another TS3 installation already exists, do you want to continue?"
+	while true; do
+		read -p " » " select
+		case $select in
+			[Yy]*) echo "Okay, continue!"; break;;
+			[Nn]*) echo "Exit script!"; exit 1;;
+			    *) echo "No option selected!";;
+		esac
+	done
+fi
+
 echo "What for TeamSpeak 3 Version do you want to install?"
 read -p " » " ts3version
 
@@ -45,40 +57,40 @@ text_sleep "Run file, please follow instructions!"
 chmod +x TeamSpeak3-Client-linux_${tarch}-${ts3version}.run
 bash TeamSpeak3-Client-linux_${tarch}-${ts3version}.run
 
-text_sleep "Create ts3client-${ts3version}-${arch}.desktop"
-touch ts3client-${ts3version}-${arch}.desktop
+text_sleep "Create teamspeak3-client.desktop"
+touch teamspeak3-client.desktop
 
 echo "[Desktop Entry]
-Name=Teamspeak 3 Client - ${ts3version} (${arch})
+Name=Teamspeak 3 Client
 VERSION=${ts3version}
-GenericName=TeamSpeak3 ${ts3version} ${arch}
+GenericName=TeamSpeak3
 Comment=Speak with friends
 Comment[de]=Spreche mit Freunden
-Exec=/opt/teamspeak/client/3/${arch}/${ts3version}/ts3client_runscript.sh
+Exec=/opt/teamspeak3-client/ts3client_runscript.sh
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=/opt/teamspeak/client/3/${arch}/${ts3version}/logo.png
+Icon=/opt/teamspeak3-client/logo.png
 Categories=Network;
-StartupWMClass=TeamSpeak 3 ${ts3version} (${arch})
-StartupNotify=true" > ts3client-${ts3version}-${arch}.desktop
+StartupWMClass=TeamSpeak 3
+StartupNotify=true" > teamspeak3-client.desktop
 
 text_sleep "Download logo and move it to TeamSpeak3-Client-linux_${tarch}..."
 cd TeamSpeak3-Client-linux_${tarch}
 curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/logo.png
 cd ..
 
-text_sleep "Move TeamSpeak3-Client-linux_${tarch} to /opt/teamspeak/client/3/${arch}/${ts3version}/\n
-and ts3client-${ts3version}-${arch}.desktop to /usr/share/applications/ts3client-${ts3version}-${arch}.desktop"
-
-dfile="/usr/share/applications/ts3client-${ts3version}-${arch}.desktop"
+dfile="/usr/share/applications/teamspeak3-client.desktop"
 if [ -f $dfile ]; then rm $dfile; fi
 
+text_sleep "Move TeamSpeak3-Client-linux_${tarch} to /opt/teamspeak3-client\n
+and teamspeak3-client.desktop to ${dfile}"
+
 # Move TS3 to /opt
-mkdir -p /opt/teamspeak/client/3/${arch}
-mv TeamSpeak3-Client-linux_${tarch} /opt/teamspeak/client/3/${arch}/${ts3version}
-mv ts3client-${ts3version}-${arch}.desktop /usr/share/applications/
-chmod -R 777 /opt/teamspeak/client/3/${arch}/${tarch}/
+mkdir -p /opt/teamspeak3-client
+mv TeamSpeak3-Client-linux_${tarch} /opt/teamspeak3-client
+mv teamspeak3-client.desktop /usr/share/applications/
+chmod -R 777 /opt/teamspeak3-client
 
 text_sleep "Delete temporary folder..."
 cd ~
