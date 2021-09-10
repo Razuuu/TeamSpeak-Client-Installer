@@ -84,7 +84,6 @@ echo -e "Delete temporary folder"
 cd ~
 rm -rf /var/tmp/razuuu-github-`basename $0`
 
-
 echo "
 TeamSpeak 3 Client Version ${ts3version} successfully
 installed at location: /opt/teamspeak3-client
@@ -95,5 +94,4 @@ files.teamspeak-services.com, github.com, raw.githubusercontent.com
 Script by Razuuu (https://www.github.com/Razuuu)
 Thank you for using this Installer!
 "
-
 exit 0
