@@ -25,7 +25,7 @@ case ${arch} in
 esac
 
 clear
-echo -e "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v1.9-STABLE"
+echo -e "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v2.0-STABLE"
 sleep 2
 
 clear
