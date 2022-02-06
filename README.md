@@ -11,7 +11,7 @@ This script must be run as root or sudo
 
 #### Using script
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/teamspeak3-client/install.sh
+curl -O -s https://git.razuuu.de/Razuuu/TeamSpeak-Client-Installer/raw/branch/master/teamspeak3-client/install.sh
 bash install.sh
 ```
 
@@ -20,19 +20,21 @@ bash install.sh
 sudo apt install teamspeak3-client
 ```
 
-#### Using [Debian Package](https://github.com/Razuuu/TeamSpeak-Client-Installer/releases)
+#### Using [Debian Package](https://git.razuuu.de/Razuuu/TeamSpeak-Client-Installer/releases)
 ```
 sudo apt install ./teamspeak3-client_3.5.6_amd64.deb
+sudo apt install ./teamspeak3-client_3.5.6_i386.deb
 ```
 
 #### Using dpkg
 ```
 sudo dpkg -i ./teamspeak3-client_3.5.6_amd64.deb
+sudo dpkg -i ./teamspeak3-client_3.5.6_i386.deb
 ```
 ## TeamSpeak Client
 #### Using script
 ```
-curl -O -s https://raw.githubusercontent.com/Razuuu/TeamSpeak-Client-Installer/master/teamspeak-client/install.sh
+curl -O -s https://git.razuuu.de/Razuuu/TeamSpeak-Client-Installer/raw/branch/master/teamspeak-client/install.sh
 bash install.sh
 ```
 
