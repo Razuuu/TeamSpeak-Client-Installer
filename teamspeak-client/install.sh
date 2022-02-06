@@ -5,11 +5,6 @@
 tsversion="5.0.0-beta66"
 arch=$(dpkg --print-architecture)
 
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root!"
-   exit 1
-fi
-
 clear
 echo -e "Unofficial TeamSpeak Client Auto-Installer\nVersion: v2.0-STABLE\n"
 

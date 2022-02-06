@@ -1,11 +1,6 @@
 #!/bin/bash
 # Created by Razuuu / www.razuuu.de
 
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root!"
-   exit 1
-fi
-
 if [ -z $1 ]; then
    echo "bash `basename $0` <3,5>"
    exit 0

@@ -1,6 +1,8 @@
 # TeamSpeak-Client-Installer
 Unofficial TeamSpeak 3 & "5" Client Installer
-for Debian and Debian-based Distributions.
+for Debian and Debian-based Distributions.  
+  
+This script must be run as root or sudo
 
 ## Dependencies
 - curl

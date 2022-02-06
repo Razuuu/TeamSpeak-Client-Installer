@@ -4,12 +4,6 @@
 # Functions and variables
 arch=$(dpkg --print-architecture)
 
-# Check root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root!"
-   exit 1
-fi
-
 # Check and set architecture
 case ${arch} in
   amd64*) tarch="amd64";;
