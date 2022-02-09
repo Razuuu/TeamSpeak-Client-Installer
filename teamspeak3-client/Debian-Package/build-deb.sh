@@ -1,12 +1,6 @@
 #!/bin/bash
 # Created by Razuuu / www.razuuu.de
 
-# Check root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root!"
-   exit 1
-fi
-
 ts3version=$1
 
 if [ -z ${ts3version} ]; then
