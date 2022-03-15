@@ -26,7 +26,7 @@ fi
 for USER in $(ls /home); do
 	# Create TeamSpeak config file
 	if [ -f /home/${USER}/.bashrc ]; then
-		mkdir -p /home/$USER/.config/TeamSpeak/Default
+		mkdir -p /home/${USER}/.config/TeamSpeak/Default
 	fi
 done
 
