@@ -59,7 +59,7 @@ mv teamspeak-client.desktop /usr/share/applications
 chmod -R 777 /opt/teamspeak-client
 
 echo "
-TeamSpeak 5 Client Version ${tsversion} successfully
+TeamSpeak Client Version ${tsversion} successfully
 installed at location: /opt/teamspeak5-client
 
 Following Websites used:
