@@ -31,8 +31,14 @@ sed -i 's|ts3ver|'"$ts3version"'|g' ${ts3version}/${i}/DEBIAN/control
 sed -i 's|pcarch|'"$i"'|g' ${ts3version}/${i}/DEBIAN/control
 sed -i 's|ts3ver|'"$ts3version"'|g' ${ts3version}/${i}/usr/share/applications/teamspeak3-client.desktop
 
-curl --progress-bar -O https://files.teamspeak-services.com/releases/client/${ts3version}/TeamSpeak3-Client-linux_${tarch}-${ts3version}.run
-bash TeamSpeak3-Client-linux_${tarch}-${ts3version}.run --target ${ts3version}/${i}/opt/teamspeak3-client
+installation_script="TeamSpeak3-Client-linux_${tarch}-${ts3version}.run"
+curl --progress-bar -O https://files.teamspeak-services.com/releases/client/${ts3version}/${installation_script}
+
+# Bypass license
+sed -i '/^MS_PrintLicense()/,/^}/{s/^/#/}' "${installation_script}"
+sed -i '/^ *if test $totalsize -ne `expr $fsize - $offset`; then$/,/^ *fi$/s/^/#/' "${installation_script}"
+
+bash ${installation_script} --target ${ts3version}/${i}/opt/teamspeak3-client
 cp logo.png ${ts3version}/${i}/opt/teamspeak3-client
 
 dpkg-deb --build ${ts3version}/${i} teamspeak3-client_${ts3version}_${i}.deb
