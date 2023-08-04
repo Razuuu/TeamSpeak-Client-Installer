@@ -2,7 +2,7 @@
 # Created by Razuuu / www.razuuu.de
 
 # Functions and variables
-tsversion="5.0.0-beta73"
+tsversion="5.0.0-beta74"
 arch=$(dpkg --print-architecture)
 
 clear
