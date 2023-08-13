@@ -10,8 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Move to build directory
-        run: cd teamspeak3-client/Debian-Package
-
-      - name: Build file for 3.6.1
-        run: bash build-deb.sh 3.6.1
+      - name: Move to build directory and build for 3.6.1
+        run: |
+          cd teamspeak3-client/Debian-Package
+          bash build-deb.sh 3.6.1
