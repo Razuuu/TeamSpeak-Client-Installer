@@ -1,0 +1,17 @@
+name: Build debian files for teamspeak3 client
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Move to build directory
+         run: cd teamspeak3-client/Debian-Package
+
+      - name: Build file for 3.6.1
+         run: bash build-deb.sh 3.6.1
