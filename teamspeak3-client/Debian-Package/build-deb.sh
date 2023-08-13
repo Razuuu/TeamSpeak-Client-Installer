@@ -13,6 +13,11 @@ curl --progress-bar -O "https://raw.githubusercontent.com/Razuuu/TeamSpeak-Clien
 
 # Loop through architectures
 for i in amd64 i386; do
+  if [ "$ts3version" = "3.6"* ] && [ "$i" = "i386" ]; then
+    echo "TeamSpeak 3 Client $ts3version and later don't support x86 anymore, skipping it"
+    break
+  fi
+  
   if [ "$i" == "i386" ]; then
     tarch="x86"
   else
