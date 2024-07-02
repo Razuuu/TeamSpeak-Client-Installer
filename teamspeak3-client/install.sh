@@ -2,9 +2,9 @@
 # Created by Razuuu / www.razuuu.de
 
 # Check architecture
-case $(dpkg --print-architecture) in
-  amd64*) tarch="amd64";;
-   i386*) tarch="x86";;
+case $(uname -m) in
+  x86_64|amd64) tarch="amd64";;
+   i*) tarch="x86";;
        *) echo "Your architecture is not supported by TeamSpeak!"; exit 1;;
 esac
 
@@ -12,7 +12,7 @@ esac
 clear
 
 # Display script header
-echo -e "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v2.0-STABLE\n"
+echo -e "Unofficial TeamSpeak 3 Client Auto-Installer\nVersion: v2.1-STABLE\n"
 
 # Check if another TS3 installation exists
 if [ -d "/opt/teamspeak3-client" ]; then
